@@ -53,10 +53,10 @@ const EmailForm = ({ date, title }: { date: string; title: string }) => {
 
         if (res.ok) {
           target.reset();
-          toast.success("Thank you for subscribing 🎉");
+          toast.success("感谢您的订阅 🎉");
         } else {
           console.error("Error:", res.status, res.statusText);
-          toast.error("Something went wrong");
+          toast.error("出错了");
         }
       } catch (error) {
         console.error("Fetch error:", error);
@@ -69,7 +69,7 @@ const EmailForm = ({ date, title }: { date: string; title: string }) => {
         {/* <div className="text-orange-500 font-medium">Limited Time Offer</div> */}
         <span className="text-green-600 bg-green-100 px-2 py-1 rounded text-sm items-center flex gap-1 w-fit">
           <Hourglass size={14} strokeWidth={2} aria-hidden="true" />
-          {getDaysLeft()} days left
+          还剩{getDaysLeft()} 天
         </span>
         <h1 className="md:text-4xl text-3xl leading-tight font-semibold">
           {title}
@@ -78,14 +78,14 @@ const EmailForm = ({ date, title }: { date: string; title: string }) => {
 
       <form onSubmit={(e) => handleSubmit(e)} className="space-y-5">
         <div>
-          <Label htmlFor="input-10">Full Name</Label>
+          <Label htmlFor="input-10">姓名</Label>
           <div className="relative">
             <Input
               type="text"
               name="name"
               id="name"
               required
-              placeholder="Full name..."
+              placeholder="请输入您的姓名..."
             />
             <div className="pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-muted-foreground/80 peer-disabled:opacity-50">
               <User size={16} strokeWidth={2} aria-hidden="true" />
@@ -93,14 +93,14 @@ const EmailForm = ({ date, title }: { date: string; title: string }) => {
           </div>
         </div>
         <div>
-          <Label htmlFor="input-10">Email address</Label>
+          <Label htmlFor="input-10">邮箱地址</Label>
           <div className="relative">
             <Input
               type="email"
               name="email"
               id="email"
               required
-              placeholder="Email Address..."
+              placeholder="请输入您的邮箱地址..."
             />
             <div className="pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-muted-foreground/80 peer-disabled:opacity-50">
               <Mail size={16} strokeWidth={2} aria-hidden="true" />
@@ -116,7 +116,7 @@ const EmailForm = ({ date, title }: { date: string; title: string }) => {
           className="group relative disabled:opacity-100 w-full"
         >
           <span className="group-data-[loading=true]:text-transparent">
-            Join the waitlist
+            加入等待名单
           </span>
           {isPending && (
             <div className="absolute inset-0 flex items-center justify-center">

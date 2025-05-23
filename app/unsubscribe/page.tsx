@@ -34,14 +34,14 @@ const UnsubscribePage = () => {
         <div className="flex flex-col items-center p-4 md:p-12">
           <div className="text-center mb-4 lg:mb-6">
             <h1 className="text-3xl md:text-[55px] font-semibold leading-none md:leading-tight">
-              Sorry to see you go!
+              很遗憾您的离开
             </h1>
           </div>
 
           {/* form to unsubscribe */}
 
           <button className="bg-black text-white px-2.5 py-1.5 rounded-md text-base transition-all duration-200 hover:bg-black/60">
-            Unsubscribe
+            取消订阅
           </button>
         </div>
         {/* element */}

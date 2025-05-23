@@ -5,7 +5,7 @@ import EmailForm from "@/components/EmailForm";
 export default function Home() {
   const siteLogo =
     process.env.NEXT_PUBLIC_LOGO ||
-    "https://res.cloudinary.com/dyv1yduua/image/upload/v1733392810/speaker_oiuezn.svg";
+    "/logo-linear.svg";
   // Data from env
   const features =
     process.env.NEXT_PUBLIC_FEATURES ||
@@ -15,9 +15,9 @@ export default function Home() {
   const date = process.env.NEXT_PUBLIC_LAUNCH_DATE || "2026-01-01";
   const title =
     process.env.NEXT_PUBLIC_TITLE ||
-    "Join the waitlist for the SAAS code library.";
+    "加入半己分析师等待名单";
   const description =
-    process.env.NEXT_PUBLIC_OFFER_TITLE || "Add offer title from env";
+    process.env.NEXT_PUBLIC_OFFER_TITLE || "请在此处添加您的优惠标题";
 
   console.log(price);
   return (

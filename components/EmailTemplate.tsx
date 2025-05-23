@@ -10,11 +10,11 @@ import {
 } from "@react-email/components";
 
 export const EmailTemplate = () => {
-  const siteLogo = process.env.NEXT_PUBLIC_DOMAIN + "/speaker.svg";
+  const siteLogo = process.env.NEXT_PUBLIC_DOMAIN + "/logo-linear.svg";
   return (
     <Html>
       <Head />
-      <Preview>{`You’re on the waitlist for ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Preview>
+      <Preview>{`您已加入 ${process.env.NEXT_PUBLIC_SITE_NAME}的等待名单`}</Preview>
       <Body style={main}>
         <Container style={container}>
           <Img
@@ -27,17 +27,14 @@ export const EmailTemplate = () => {
           <Section>
             <Text
               style={text}
-            >{`Big welcome and thanks for subscribing ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Text>
+            >{`热烈欢迎并感谢您订阅 ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Text>
             <Text style={text}>
-              🚀 The mission is to send out a stylish and simple newsletter that
-              help busy creatives to stay updated without cluttering their
-              inbox.
+              🚀  我们的使命是发送时尚简洁的资讯，帮助繁忙的创意人士保持更新，而不会让他们的收件箱混乱不堪。
             </Text>
             <Text style={text}>
-              🛳 All new AI resources and tools are carefully curated, with only
-              a handful of the best being shipped.
+              🛳 所有新的人工智能资源和工具都经过精心策划，只提供少量最优质的内容。
             </Text>
-            <Text style={text}>Expect a new shipment every Tuesday!</Text>
+            <Text style={text}>敬请期待</Text>
           </Section>
         </Container>
       </Body>

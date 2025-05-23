@@ -6,7 +6,7 @@ import { ChevronLeft } from "lucide-react";
 const PrivacyPolicyPage = () => {
   const siteLogo =
     process.env.NEXT_PUBLIC_LOGO ||
-    "https://res.cloudinary.com/dyv1yduua/image/upload/v1733392810/speaker_oiuezn.svg";
+    "/logo-linear.svg";
 
   return (
     <section className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-2">
@@ -14,13 +14,13 @@ const PrivacyPolicyPage = () => {
       <img
         src={siteLogo}
         alt="logo"
-        className="w-auto h-25 mx-auto object-contain"
+        className="w-auto h-25 mx-auto object-contain pb-5" 
       />
       <div className="max-w-screen-lg border-[1.5px] border-[#F0E4D2] mx-auto relative">
         <div className="flex flex-col items-center p-4 md:p-12">
           <div className="text-center mb-4 lg:mb-6">
             <h1 className="text-xl md:text-[30px] font-semibold leading-none md:leading-tight">
-              Privacy Policy
+              隐私政策
             </h1>
           </div>
           <p className="text-black/70 font-normal mb-6">
@@ -34,7 +34,7 @@ const PrivacyPolicyPage = () => {
                 strokeWidth={2}
                 aria-hidden="true"
               />
-              Go back
+              返回
             </Button>
           </Link>
         </div>
