@@ -7,8 +7,8 @@ const fromEmail = process.env.NEXT_PUBLIC_FROM_EMAIL;
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME;
 const audienceId = process.env.NEXT_PUBLIC_AUDIENCE_ID;
 const siteUrl = process.env.NEXT_PUBLIC_DOMAIN;
-const unsubscribeUrl = `${siteUrl}/unsubscribe`;
-const subject = `You’re on the waitlist for ${siteName}`;
+const unsubscribeUrl = `${siteUrl}/取消订阅`;
+const subject = `欢迎加入 ${siteName}等待名单`;
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
@@ -24,17 +24,17 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    const addContact = await resend.contacts.create({
+/*    const addContact = await resend.contacts.create({
       email: body.email,
       firstName: body.firstName,
       lastName: body.lastName,
       unsubscribed: false,
       audienceId: audienceId as string,
     });
-
+*/
     return NextResponse.json({
       sendEmail,
-      addContact,
+      //addContact,
     });
   } catch (error) {
     return NextResponse.json({ error });

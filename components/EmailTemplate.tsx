@@ -14,7 +14,7 @@ export const EmailTemplate = () => {
   return (
     <Html>
       <Head />
-      <Preview>{`您已加入 ${process.env.NEXT_PUBLIC_SITE_NAME}的等待名单`}</Preview>
+      <Preview>{`您已加入${process.env.NEXT_PUBLIC_SITE_NAME}的等待名单`}</Preview>
       <Body style={main}>
         <Container style={container}>
           <Img
@@ -25,16 +25,27 @@ export const EmailTemplate = () => {
             alt="Logo"
           />
           <Section>
+            <Text style={text}>
+            亲爱的朋友，
+            </Text>
             <Text
               style={text}
-            >{`热烈欢迎并感谢您订阅 ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Text>
+            >{`感谢您关注 ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Text>
             <Text style={text}>
-              🚀  我们的使命是发送时尚简洁的资讯，帮助繁忙的创意人士保持更新，而不会让他们的收件箱混乱不堪。
+            我是半己的创始人，感谢您对我们使命的认可——
+            <span style={{ fontWeight: "bold" }}>用最简单的方式，让每个人都能轻松获得数据洞察。</span>
+            所有功能我们都在精心打磨，只为呈现真正有用、好用、优雅的工具。
+            🚀 您已成功加入等待列表，我们将在产品上线前第一时间通知您，并为您准备了更多的免费额度。
+            </Text>
+            <Text style={text}>敬请期待！</Text>
+            <Text style={text}>
+            彭博 半己创始人 
             </Text>
             <Text style={text}>
-              🛳 所有新的人工智能资源和工具都经过精心策划，只提供少量最优质的内容。
+              <a href="https://banjee.cn" style={anchor}>
+                banjee.cn
+              </a>
             </Text>
-            <Text style={text}>敬请期待</Text>
           </Section>
         </Container>
       </Body>
@@ -59,12 +70,12 @@ const img = {
 };
 
 const text = {
-  fontSize: "16px",
+  fontSize: "14px",
   fontFamily:
-    "'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif",
+    "'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'STHeiti', 'WenQuanYi Micro Hei', 'Helvetica Neue', Arial, sans-serif",
   fontWeight: "400",
   color: "#404040",
-  lineHeight: "26px",
+  lineHeight: "24px",
   // padding: "0 40px",
 };
 
